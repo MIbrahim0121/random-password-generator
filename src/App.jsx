@@ -178,11 +178,11 @@ toast.success("Password copied successfully! ", {
             </div>
           </section>
 
-          <section className="mb-4">
+          <section className="mb-4 flex flex-col gap-4 items-center justify-center">
             <form className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center " action="">
               <div className="flex flex-col">
                 <label className="text-sm text-slate-600 mb-2">Length: <span className="font-medium text-slate-800">{length}</span></label>
-                <input type="range" min={4} max={32} value={length} onClick={handleLength} className="w-full" />
+                <input type="range" min={8} max={16}  onClick={handleLength} className="w-full" />
               </div>
 
               <div className="flex gap-4  items-center">
@@ -197,9 +197,10 @@ toast.success("Password copied successfully! ", {
               </div>
 
               <div className="md:col-span-2 flex justify-end">
-                <button className='bg-emerald-600 text-white px-4 py-2 m-auto rounded-lg shadow hover:bg-emerald-700' onClick={() => generateNewPassword(length)}>Generate New Password</button>
+                
               </div>
             </form>
+            <button className='bg-emerald-600 text-white px-4 py-2  rounded-lg shadow hover:bg-emerald-700' onClick={() => generateNewPassword(length)}>Generate New Password</button>
           </section>
 
           <footer className="text-xs text-slate-500">Tip: Click "Generate New Password" to create a new secure password. Use copy to save it to clipboard.</footer>
